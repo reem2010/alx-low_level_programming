@@ -10,7 +10,7 @@ int main(void)
 
 	for (c = 97; c <= 122; c++)
 	{
-		putcar(c);
+		putchar(c);
 		putchar('\n');
 	}
 	return (0);
