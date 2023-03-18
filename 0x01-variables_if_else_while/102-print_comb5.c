@@ -16,17 +16,20 @@ int main(void)
 		{
 			for (c = 48; c <= 57; c++)
 			{
-				for (d = b+1; d <= 57; d++)
+				for (d = 0; d <= 57; d++)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(' ');
-					putchar(c);
-					putchar(d);
-					if (b != 56 || a != 57)
+					if ((a != c || b != d) && (d > b))
 					{
-						putchar(',');
+						putchar(a);
+						putchar(b);
 						putchar(' ');
+						putchar(c);
+						putchar(d);
+						if (b != 56 || a != 57)
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}
