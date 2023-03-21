@@ -8,7 +8,10 @@
 
 void jack_bauer(void)
 {
-	char a, b, c, d;
+	char a;
+	char b;
+	char c;
+	char d;
 
 	for (a = 48; a <= 49; a++)
 	{
@@ -16,7 +19,7 @@ void jack_bauer(void)
 		{
 			for (c = 48; c <= 53; c++)
 			{
-				for (a = 48; a <= 57; d++)
+				for (d = 48; d <= 57; d++)
 				{
 					_putchar (a);
 					_putchar (b);
