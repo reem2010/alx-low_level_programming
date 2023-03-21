@@ -29,7 +29,7 @@ void jack_bauer(void)
 					_putchar ('\n');
 				}
 			}
-			if (a == '2' && b == 3)
+			if (a == 50 && b == 51)
 				break;
 		}
 	}
