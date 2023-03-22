@@ -17,7 +17,7 @@ void print_times_table(int n)
 
 
 	m = 0;
-	if (n > 15 || n < 0)
+	if (n <=  15 && n >= 0)
 	{
 		for (i = 0; i <= n; n++)
 		{
@@ -35,7 +35,7 @@ void print_times_table(int n)
 					printf("%d", num);
 			}
 			printf("\n");
-			m = m+1;
+			m = m + 1;
 		}
 	}
 
