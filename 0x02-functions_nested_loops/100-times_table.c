@@ -38,7 +38,6 @@ void print_times_table(int n)
 			m = m+1;
 		}
 	}
-}
 
 
 
