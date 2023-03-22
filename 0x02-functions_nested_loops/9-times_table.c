@@ -26,4 +26,5 @@ void times_table(void)
 		}
 		m = m + 1;
 	}
+}
 
