@@ -35,7 +35,7 @@ void print_times_table(int n)
 					printf("%d", num);
 			}
 			printf("\n");
-			m = m+1
+			m = m+1;
 		}
 	}
 }
