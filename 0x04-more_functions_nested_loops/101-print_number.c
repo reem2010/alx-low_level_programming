@@ -14,7 +14,6 @@ void print_number(int n)
 
 	num = n;
 	ind = 0;
-	
 	if (n < 0)
 	{
 		n = 0 - n;
