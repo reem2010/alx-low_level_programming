@@ -16,7 +16,7 @@ void print_number(int n)
 	ind = 0;
 	if (n != 0)
 	{
-		while (n != 0)
+		while (num != 0)
 		{
 			ind = ind + 1;
 			num = num / 10;
@@ -30,6 +30,7 @@ void print_number(int n)
 		}
 	}
 	_putchar ('0' + n);
+	_putchar ('\n');
 }
 
 
