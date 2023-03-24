@@ -1,36 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - check the code
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
-
 int main(void)
 {
+	long i;
 	long n;
-	int i;
-	int j;
-	int prime;
-	int max;
-
-	max = 0;
-
+	
 	n = 612852475143;
 
-	for (i = 2; i <= (n / 2); i++)
+	for (i  = 2; i <= n; i++)
 	{
-		if ((n % i) == 0)
+		if (n % i == 0)
 		{
-			for (j = i+1; j <= (i / 2); j++)
-			{
-				if ((i % j) == 0)
-					break;
-				prime = i;
-			}
-			if (prime >= max)
-				max = prime;
+			n = n / i;
+			i--;
 		}
 	}
-	printf("%d", max);
+	printf("%lu\n", i);
+	return (0);
 }
