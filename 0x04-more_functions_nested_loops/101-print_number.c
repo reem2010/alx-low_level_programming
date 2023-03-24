@@ -11,7 +11,7 @@ void print_number(int n)
 	int num;
 	int i;
 	int z;
-
+	
 	z = 1;
 	num = n;
 	ind = 0;
@@ -29,7 +29,6 @@ void print_number(int n)
 			if (num != 0)
 				z = z * 10;
 		}
-
 		for (i = 1; i < ind; i++)
 		{
 			dig = n / z;
