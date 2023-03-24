@@ -29,9 +29,9 @@ void print_number(int n)
 
 		for (i = 1; i < ind; i++)
 		{
-			dig = n / (10 * (ind - 1));
+			dig = n / (10 ** (ind - 1));
 			_putchar ('0' + dig);
-			n = n % (10 * (ind - 1));
+			n = n % (10 ** (ind - 1));
 		}
 	}
 	_putchar ('0' + n);
