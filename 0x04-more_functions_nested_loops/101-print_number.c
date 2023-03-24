@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 /**
  * print_number - prints an integer
@@ -11,6 +12,7 @@ void print_number(int n)
 	int dig;
 	int num;
 	int i;
+	int z;
 
 	num = n;
 	ind = 0;
@@ -29,9 +31,10 @@ void print_number(int n)
 
 		for (i = 1; i < ind; i++)
 		{
-			dig = n / (10 ^ (ind - 1));
+			z= pow (10,(ind - i));
+			dig = n / z;
 			_putchar ('0' + dig);
-			n = n % (10 ^ (ind - 1));
+			n = n % z;
 		}
 	}
 	_putchar ('0' + n);
