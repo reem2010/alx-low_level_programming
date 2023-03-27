@@ -15,15 +15,7 @@ void puts2(char *str)
 	{
 		len = len + 1;
 	}
-	if (len % 2)
-	{
-		for (i = (len - 1) / 2; i < len; i++)
-			_putchar (str[i]);
-	}
-	else
-	{
-		for (i = len / 2; i < len; i++)
-			_putchar (str[i]);
-	}
+	for (i = 0; i < len; i = i + 2)
+		_putchar (str[i]);
 	_putchar ('\n');
 }
