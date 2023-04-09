@@ -5,15 +5,8 @@
  * @argv: array containing a program command line arguments
  * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused))char *argv[])
 {
-	int size;
-
-	while (argv[argc - 1] != argv[0])
-	{
-		size++;
-		argc--;
-	}
-	printf("%d\n", size);
+	printf("%d\n", argc);
 	return (0);
 }
