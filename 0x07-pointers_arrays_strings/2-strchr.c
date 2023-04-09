@@ -8,15 +8,22 @@
 char *_strchr(char *s, char c)
 {
 	int i;
+	int found;
 
 	i = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
 		{
+			found++;
 			break;
 		}
 		i++;
 	}
-	return (s + i);
+	if (found == 1)
+	{
+		return (s + i);
+	}
+	else
+		return (NULL);
 }
