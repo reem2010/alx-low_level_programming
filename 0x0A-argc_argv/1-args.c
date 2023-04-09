@@ -9,10 +9,10 @@ int main(int argc, char *argv[])
 {
 	int size;
 
-	while (argv[argc-1] != argv[0])
+	while (argv[argc - 1] != argv[0])
 	{
 		size++;
-		argv--;
+		argc--;
 	}
 	printf("%d\n", size);
 	return (0);
