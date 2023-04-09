@@ -11,6 +11,7 @@ char *_strchr(char *s, char c)
 	int found;
 
 	i = 0;
+	found = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
