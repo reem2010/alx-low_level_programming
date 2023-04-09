@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * *_memset - fills memory with a constant byte
  * @*s: pinter
@@ -7,7 +8,7 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
+	unsigned int i;
 	char *p;
 
 	p = s;
