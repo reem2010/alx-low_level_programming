@@ -7,16 +7,16 @@
  * @height: number of rows
  * Return: returns a pointer to a 2 dimensional array of integers
  */
-int *p[100];
 int **alloc_grid(int width, int height)
 {
 	int i, j;
+	int **p;
 
 	if ((width <= 0) || (height <= 0))
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
-		p[i] = (int *)malloc(sizeof(int) * width);
+		p = (int *)malloc(sizeof(int) * width);
 		if (p[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
