@@ -15,25 +15,30 @@ char *argstostr(int ac, char **av)
 
 	size = 0;
 	j = 0;
+	i = 0;
+	l = 0;
 	if ((ac == 0) || (av == NULL))
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		size = size + strlen(av[i]) + 1;
 	}
-	printf("%d", size);
-	p = (char *)malloc(size);
+	p = (char *)malloc(size + 1);
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < size; i = i + strlen(av[l - 1]) + 1)
+	i = 0;
+	while (i < size)
 	{
 		j = 0;
-		while (av[l][j])
+		while ((av[l][j]))
 		{
-			p[i + j] = av[l][j];
+			p[i + j] = (char) av[l][j];
 			j++;
 		}
+
 		p[i + j] = '\n';
+		i = i + strlen(av[l]) + 1;
+
 		l++;
 	}
 	return (p);
