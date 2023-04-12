@@ -20,6 +20,8 @@ char **strtow(char *str)
 			row++;
 		l++;
 	}
+	if (row == 0)
+		return (NULL);
 	p = (char **)malloc((sizeof(char *) * (row + 1)));
 	if (p == NULL)
 		return (NULL);
