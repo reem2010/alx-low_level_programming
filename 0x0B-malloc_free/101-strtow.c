@@ -29,7 +29,7 @@ char **strtow(char *str)
 		size = 0;
 		while (str[l] == ' ')
 			l++;
-		while (str[l] != ' ')
+		while ((str[l] != ' ') && (l < (int)strlen(str)))
 		{
 			size++;
 			l++;
