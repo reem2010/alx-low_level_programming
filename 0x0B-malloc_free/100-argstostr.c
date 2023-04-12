@@ -25,16 +25,16 @@ char *argstostr(int ac, char **av)
 	p = (char *)malloc(size);
 	if (p == NULL)
 		return (NULL);
-for (i = 0; i < size; i = i + strlen(av[l-1]) + 1)
-        {
-                j = 0;
-                while (av[l][j])
-                {
-                        p[i + j] = av [l][j];
-                        j++;
-                }
-                p[i+j] = '\n';
-                l++;
-        }
+	for (i = 0; i < size; i = i + strlen(av[l - 1]) + 1)
+	{
+		j = 0;
+		while (av[l][j])
+		{
+			p[i + j] = av[l][j];
+			j++;
+		}
+		p[i + j] = '\n';
+		l++;
+	}
 	return (p);
 }
