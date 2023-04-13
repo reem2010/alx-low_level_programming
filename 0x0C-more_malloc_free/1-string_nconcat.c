@@ -6,7 +6,7 @@
  * string_nconcat -  concatenates two strings
  * @s1: first string
  * @s2: second string
- * @n:  first n bytes of s2
+ * @n: first n bytes of s2
  * Return: pointer to a string the concatenate s1 and s2
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -26,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < size1; i++)
 		p[i] = s1[i];
 	for (i = 0; i < n; i++)
-	       	p[i + size1] = s2[i];
+		p[i + size1] = s2[i];
 	return (p);
 }
 
