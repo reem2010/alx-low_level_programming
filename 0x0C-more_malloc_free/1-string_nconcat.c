@@ -23,10 +23,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = 0;
 	p = (char *) malloc(size1 + n + 1);
 	if (p == NULL)
-		exit(3);
+		exit(1);
 	for (i = 0; i < size1; i++)
 		p[i] = s1[i];
 	for (i = 0; i < n; i++)
 		p[i + size1] = s2[i];
+	if (strlen(p) == 0)
+		exit(1);
 	return (p);
 }
