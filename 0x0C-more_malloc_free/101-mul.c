@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 /**
  * main -  multiplies two positive numbers
  * @argc: the number of command arguments
@@ -10,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j;
+	unsigned int i, j;
 
 	if (argc != 3)
 	{
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < 3; i++)
 	{
-		for (j = 0; j < strlen(argv[i]; j++))
+		for (j = 0; j < strlen(argv[i]); j++)
 		{
 			if (!(isdigit(argv[i][j])))
 			{
