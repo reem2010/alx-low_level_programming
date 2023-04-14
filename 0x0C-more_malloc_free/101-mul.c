@@ -10,6 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
+	int i, j;
+
 	if (argc != 3)
 	{
 		_putchar('E');
@@ -20,7 +22,22 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		exit(98);
 	}
-	printf ("%d",atoi(argv[1]));
+	for (i = 1; i < 3; i++)
+	{
+		for (j = 0; j < strlen(argv[i]; j++))
+		{
+			if (!(isdigit(argv[i][j])))
+			{
+				_putchar('E');
+				_putchar('r');
+				_putchar('r');
+				_putchar('o');
+				_putchar('r');
+				putchar('\n');
+				exit(98);
+			}
+		}
+	}
 	return (0);
 
 }
