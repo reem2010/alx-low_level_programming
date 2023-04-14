@@ -12,7 +12,12 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		printf("Error/n");
+		_putchar('E');
+		_putchar('r');
+		_putchar('r');
+		_putchar('o');
+		_putchar('r');
+		_putchar('\n');
 		exit(98);
 	}
 	printf ("%d",atoi(argv[1]));
