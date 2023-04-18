@@ -1,4 +1,5 @@
 #ifndef FUNCTION_H
 #define FUNCTION_H
-#define abs(x) if(x > 0)
-#define a
+#define ABS(x) (((((x) < 0) * -2) + 1) * x)
+
+#endif
