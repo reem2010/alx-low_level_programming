@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 
 	i = 0;
 	found = 0;
-	if ((s != NULL))
+	if ((s != NULL) && (c != '\0'))
 	{
 		while (s[i])
 		{
