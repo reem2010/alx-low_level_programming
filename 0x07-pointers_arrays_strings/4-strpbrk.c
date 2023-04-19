@@ -9,10 +9,29 @@ char *_strpbrk(char *s, char *accept)
 {
 	int i;
 	int j;
-
-
+	int found;
 
 	i = 0;
-	return (s + i);
+	found = 0;
+	while (s[i])
+	{
+		j = 0;
+		while (accept[j])
+		{
+			if (s[i] == accept[j])
+			{
+				found = 1;
+				break;
+			}
+			j++;
+		}
+		if (found == 1)
+			break;
+		i++;
+	}
+	if (found == 1)
+		return (s + i);
+	else
+		return (NULL);
 }
 
