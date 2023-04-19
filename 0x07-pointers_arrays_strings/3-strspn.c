@@ -16,13 +16,19 @@ unsigned int _strspn(char *s, char *accept)
 	j = 0;
 	while (s[i])
 	{
-		if (s[i] == ',' && s[i+1] == ' ')
+		if (s[i] == ',' && s[i + 1] == ' ')
 			break;
+		j = 0;
 		while (accept[j])
 		{
 			if (s[i] == accept[j])
+			{
 				num++;
+				break;
+			}
+			j++;
 		}
+		i++;
 	}
 	return (num);
 }
