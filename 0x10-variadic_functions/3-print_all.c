@@ -19,15 +19,12 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%c", va_arg(data, int));
-				s = 1;
 				break;
 			case 'i':
 				printf("%d", va_arg(data, int));
-				s = 1;
 				break;
 			case 'f':
 				printf("%f", va_arg(data, double));
-				s = 1;
 				break;
 			case 's':
 				p = va_arg(data, char *);
@@ -37,10 +34,11 @@ void print_all(const char * const format, ...)
 					break;
 				}
 				printf("%s", p);
-				s = 1;
 				break;
+			default:
+				s = 1;
 		}
-		if ((format[i + 1] != '\0') && (s == 1))
+		if ((format[i + 1] != '\0') && (s != 1))
 			printf(", ");
 		i++;
 		s = 0;
