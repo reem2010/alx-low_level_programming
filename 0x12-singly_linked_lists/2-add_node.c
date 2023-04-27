@@ -2,7 +2,7 @@
 /**
  * add_node - adds a new node at the beginning of a list
  * @head: head of list
- * @str the string
+ * @str: the string
  * Return: the address of the new element
  */
 list_t *add_node(list_t **head, const char *str)
