@@ -22,8 +22,11 @@ int get_bit(unsigned long int n, unsigned int index)
 		temp = temp >> 1;
 		size++;
 	}
-/*	if (index > (size - 1))
-*		return (-1);*/
-	res = (n >> index) & 1;
+	if (size != 0)
+	{
+		if (index > (size - 1))
+			return (-1);
+		res = (n >> index) & 1;
+	}
 	return (res);
 }
