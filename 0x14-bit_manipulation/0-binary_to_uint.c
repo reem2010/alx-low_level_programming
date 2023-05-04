@@ -8,9 +8,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int size = 0, base = 1, i, num = 0;
 
-	if (!b)
-		return (0);
-	while (b[size])
+	while (b && b[size])
 	{
 		if (b[size] != '0' && b[size] != '1')
 			return (0);
