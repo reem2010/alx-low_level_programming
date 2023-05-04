@@ -8,8 +8,6 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int temp;
-	unsigned int size = 0;
 	int res;
 
 	if (index > 63)
