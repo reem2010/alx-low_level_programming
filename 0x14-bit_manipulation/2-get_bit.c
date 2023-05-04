@@ -12,16 +12,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int size = 0;
 	int res;
 
-	if ((n == 0) && (index == 0))
-		return (0);
-	else if ((n == 0) && (index > 0))
-		return (-1);
-	temp = n;
-	while (temp)
-	{
-		temp = temp >> 1;
-		size++;
-	}
 	if (index > 63)
 		return (-1);
 	res = (n >> index) & 1;
