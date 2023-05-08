@@ -28,12 +28,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (ind == -1)
 	{
 		free(out);
+		close(fd);
 		return (0);
 	}
 	ind2 = write(STDOUT_FILENO, out, letters);
 	if (ind2 == -1 || (unsigned int)ind2 != letters)
 	{
 		free(out);
+		close(fd);
 		return (0);
 	}
 	free(out);
