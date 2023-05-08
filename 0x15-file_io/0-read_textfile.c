@@ -31,8 +31,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	ind2 = write(STDOUT_FILENO, out, letters);
-	if (ind2 == -1 || (unsigned int)ind2 != letters)
+	ind2 = write(STDOUT_FILENO, out, ind);
+	if (ind2 == -1 || ind2 != ind)
 	{
 		free(out);
 		close(fd);
