@@ -10,7 +10,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, ind;
+	int fd, ind, ind2;
 	char *out;
 
 	if (!filename)
@@ -30,8 +30,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(out);
 		return (0);
 	}
-	ind = write(STDOUT_FILENO, out, letters);
-	if (ind == -1 || (unsigned int)ind != letters)
+	ind2 = write(STDOUT_FILENO, out, letters);
+	if (ind2 == -1 || (unsigned int)ind2 != letters)
 	{
 		free(out);
 		return (0);
