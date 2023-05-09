@@ -29,22 +29,22 @@ int main(int argc, char *argv[])
 		{
 			ind = read(fd, s, 1024);
 			if (ind == -1)
-				dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
+				free(s), dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
 			ind1 = write(fd1, s, ind);
 			if (ind1 == -1)
-				dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
+				free(s), dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
 		}
 	}
 	ind = close(fd);
 	if (ind == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		free(s), dprintf(2, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	ind1 = close(fd1);
 	if (ind1 == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd1);
+		free(s), dprintf(2, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
 	free(s);
