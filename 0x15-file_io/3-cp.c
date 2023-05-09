@@ -25,12 +25,15 @@ int main(int argc, char *argv[])
 	s = malloc(1024);
 	if (s)
 	{
-		ind = read(fd, s, 1024);
-		if (ind == -1)
-			dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
-		ind1 = write(fd1, s, ind);
-		if (ind1 == -1)
-			dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
+		while (ind > 0)
+		{
+			ind = read(fd, s, 1024);
+			if (ind == -1)
+				dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
+			ind1 = write(fd1, s, ind);
+			if (ind1 == -1)
+				dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
+		}
 	}
 	ind = close(fd);
 	if (ind == -1)
