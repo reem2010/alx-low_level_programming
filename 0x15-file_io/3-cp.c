@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
 			dprintf(1, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	ind = close(fd);
-	ind1 = close(fd1);
 	if (ind == -1)
 	{
 		dprintf(1, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
+	ind1 = close(fd1);
 	if (ind1 == -1)
 	{
 		dprintf(1, "Error: Can't close fd %d\n", fd1);
