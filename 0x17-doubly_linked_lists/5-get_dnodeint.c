@@ -3,7 +3,7 @@
  * get_dnodeint_at_index - get node
  * @head: head
  * @index: the index
- * Return:  returns the nth node 
+ * Return:  returns the nth node
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
