@@ -18,7 +18,10 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	new->n = n;
 	new->next = NULL;
 	if (temp)
+	{
 		temp->next = new;
+		new->prev = temp;
+	}
 	else
 		*head = new;
 	return (new);
