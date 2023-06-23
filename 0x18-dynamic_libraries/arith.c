@@ -1,4 +1,4 @@
-#include "main.h"
+
 /**
  * add - add two numbers
  * @x: first numbrt
