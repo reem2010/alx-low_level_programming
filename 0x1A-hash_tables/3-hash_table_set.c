@@ -15,8 +15,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new = malloc(sizeof(hash_node_t));
 	if (!new)
 		return (0);
-	new->key = (char *)key;
-	new->value = (char *)value;
+	new->key = malloc(strlen(key) + 1);
+	if (!new->key)
+	{
+		free(new);
+		return (0);
+	}
+	new->value = malloc(strlen(value) + 1);
+	if (!new->value)
+	{
+		free(new);
+		free(new->key);
+		return (0);
+	}
+	strcpy(new->key, (char *)key);
+	strcpy(new->value, (char *)value);
 	new->next = (ht->array)[index];
 	(ht->array)[index] = new;
 	return (1);
